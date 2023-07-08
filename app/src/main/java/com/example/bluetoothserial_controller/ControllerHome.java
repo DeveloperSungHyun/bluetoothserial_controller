@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class ControllerHome extends Fragment {
 
     RecyclerViewAdapter recyclerViewAdapter;
-    RecyclerView RecyclerView_remote;
+    RecyclerView RecyclerView_game;
 
     ArrayList<ViewItem> viewItems;
     ViewItem item;
@@ -31,14 +31,14 @@ public class ControllerHome extends Fragment {
 
         View view = inflater.inflate(R.layout.controller_home, container, false);
 
-        RecyclerView_remote = view.findViewById(R.id.RecyclerView_remote);
+        RecyclerView_game = view.findViewById(R.id.RecyclerView_game);
 
         LinearLayoutManager linearLayoutManager;
         linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL , false);
-        RecyclerView_remote.setLayoutManager(linearLayoutManager);
+        RecyclerView_game.setLayoutManager(linearLayoutManager);
 
         RecyclerViewDecoration recyclerViewDecoration = new RecyclerViewDecoration(30);
-        RecyclerView_remote.addItemDecoration(recyclerViewDecoration);
+        RecyclerView_game.addItemDecoration(recyclerViewDecoration);
 
         viewItems = new ArrayList<>();
         item = new ViewItem(R.drawable.ic_launcher_background);
@@ -49,7 +49,7 @@ public class ControllerHome extends Fragment {
 
         recyclerViewAdapter = new RecyclerViewAdapter(viewItems);
 
-        RecyclerView_remote.setAdapter(recyclerViewAdapter);
+        RecyclerView_game.setAdapter(recyclerViewAdapter);
 
         return view;
     }

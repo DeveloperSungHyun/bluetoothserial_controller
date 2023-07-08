@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="title_name_test1">#1C1C1C</color>
+
     <drawable name="bottom_navigation_icon_controller">@drawable/controller_icon_light</drawable>
     <drawable name="bottom_navigation_icon_monitor">@drawable/monitoring_icon_light</drawable>
     <drawable name="bottom_navigation_icon_command">@drawable/command_icon_light</drawable>
