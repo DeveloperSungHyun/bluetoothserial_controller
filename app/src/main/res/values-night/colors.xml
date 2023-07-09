@@ -14,4 +14,7 @@
     <drawable name="bottom_navigation_icon_controller">@drawable/controller_icon_dark</drawable>
     <drawable name="bottom_navigation_icon_monitor">@drawable/monitoring_icon_dark</drawable>
     <drawable name="bottom_navigation_icon_command">@drawable/command_icon_dark</drawable>
+
+    <drawable name="icon_remote">@drawable/remote_icon_dark</drawable>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.bluetoothserial_controller;
+package com.example.bluetoothserial_controller.FragmentActivity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,11 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class MonitorHome extends Fragment {
+import com.example.bluetoothserial_controller.R;
+
+public class CommandHome extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.monitor_home, container, false);
+        return inflater.inflate(R.layout.command_home, container, false);
     }
 }

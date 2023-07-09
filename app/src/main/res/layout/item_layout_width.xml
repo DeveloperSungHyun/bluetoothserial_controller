@@ -10,6 +10,7 @@
         app:cardCornerRadius="10dp">
 
         <ImageView
+            android:id="@+id/ImageView_CheckImg"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:adjustViewBounds="true"

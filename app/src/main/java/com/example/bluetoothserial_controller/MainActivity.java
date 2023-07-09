@@ -2,22 +2,15 @@ package com.example.bluetoothserial_controller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowInsets;
-import android.widget.FrameLayout;
 
-import com.example.bluetoothserial_controller.RecyclerView.ViewItem;
+import com.example.bluetoothserial_controller.FragmentActivity.CommandHome;
+import com.example.bluetoothserial_controller.FragmentActivity.ControllerHome;
+import com.example.bluetoothserial_controller.FragmentActivity.MonitorHome;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 

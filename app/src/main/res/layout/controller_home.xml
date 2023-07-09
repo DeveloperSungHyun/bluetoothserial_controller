@@ -34,7 +34,7 @@
 
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RecyclerView_game"
+            android:id="@+id/RecyclerView_joystick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -43,7 +43,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -57,12 +58,12 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/bottom_navigation_icon_controller"
+                android:src="@drawable/icon_remote"
                 android:layout_marginRight="5dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="조이스틱 컨트롤러"
+                android:text="리모트 컨트롤러"
                 android:textSize="19dp"
                 android:textStyle="bold"
                 android:textColor="@color/title_name_test1" />
