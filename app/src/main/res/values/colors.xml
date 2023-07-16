@@ -15,5 +15,8 @@
     <drawable name="bottom_navigation_icon_command">@drawable/command_icon_light</drawable>
 
     <drawable name="icon_remote">@drawable/remote_icon_light</drawable>
+    <drawable name="icon_sensor">@drawable/sensors_icon_light</drawable>
 
+    <drawable name="bluetooth_icon_on">@drawable/bluetooth_on_icon_light</drawable>
+    <drawable name="bluetooth_icon_off">@drawable/bluetooth_off_icon_light</drawable>
 </resources>

@@ -25,9 +25,9 @@ import java.util.ArrayList;
 public class ControllerHome extends Fragment {
     Intent intent;
     RecyclerViewManager recyclerViewManager;
-    RecyclerView RecyclerView_joystick, RecyclerView_remote;
+    RecyclerView RecyclerView_joystick, RecyclerView_remote, RecyclerView_sensor;
 
-    ArrayList<ItemData> itemArrayList_1, itemArrayList_2;
+    ArrayList<ItemData> itemArrayList_1, itemArrayList_2, itemArrayList_3;
     ItemData itemData;
 
     @Nullable
@@ -38,6 +38,7 @@ public class ControllerHome extends Fragment {
 
         RecyclerView_joystick = view.findViewById(R.id.RecyclerView_joystick);
         RecyclerView_remote = view.findViewById(R.id.RecyclerView_remote);
+        RecyclerView_sensor = view.findViewById(R.id.RecyclerView_sensor);
 
         intent = new Intent(view.getContext(), JoystickLayout_1.class);
 
@@ -55,8 +56,16 @@ public class ControllerHome extends Fragment {
             itemArrayList_2.add(itemData);
         }
 
+        itemArrayList_3 = new ArrayList<>();
+        itemData = new ItemData(intent, R.drawable.test2);
+
+        for (int i = 0; i < 5; i++) {
+            itemArrayList_3.add(itemData);
+        }
+
         recyclerViewManager = new RecyclerViewManager(getContext(), RecyclerView_joystick,0,  itemArrayList_1);
         recyclerViewManager = new RecyclerViewManager(getContext(), RecyclerView_remote,1, itemArrayList_2);
+        recyclerViewManager = new RecyclerViewManager(getContext(), RecyclerView_sensor,1, itemArrayList_3);
 
         return view;
     }

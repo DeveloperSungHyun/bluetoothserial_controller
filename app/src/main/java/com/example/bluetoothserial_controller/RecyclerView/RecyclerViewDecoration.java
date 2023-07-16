@@ -30,7 +30,6 @@ public class RecyclerViewDecoration extends RecyclerView.ItemDecoration {
             outRect.right = 15;
             outRect.left = 15;
         }
-
-
+        outRect.bottom = 40;
     }
 }
