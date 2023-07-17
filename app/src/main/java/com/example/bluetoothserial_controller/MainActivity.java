@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         TextView_BluetoothName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<DeviceData> deviceData = bluetoothManager.GetAddressList();
+                ArrayList<DeviceData> deviceData = bluetoothManager.GetDeviceDataList();
 
                 AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
                 dlg.setTitle("블루투스 목록"); //제목

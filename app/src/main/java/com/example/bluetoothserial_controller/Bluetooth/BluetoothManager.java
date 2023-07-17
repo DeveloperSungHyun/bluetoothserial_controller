@@ -37,9 +37,9 @@ public class BluetoothManager {
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     }
 
-    public ArrayList<DeviceData> GetAddressList() {
+    public ArrayList<DeviceData> GetDeviceDataList() {//=======================블루투스 디바이스 주소
         ArrayList<DeviceData> deviceData = new ArrayList<>();
-        DeviceData AddressList;
+        DeviceData data;
         String Address;
         String Alias;//Build.VERSION_CODES.R 이상
         String Name;
@@ -56,6 +56,8 @@ public class BluetoothManager {
             // for ActivityCompat#requestPermissions for more details.
         }
 
+
+        //블루투스 정보를 DeviceData 객체에 담아 리스트로 만든다.
         for (BluetoothDevice device : bluetoothAdapter.getBondedDevices()) {
             Address = device.getAddress();
             Name = device.getName();
@@ -65,14 +67,14 @@ public class BluetoothManager {
             } else {
                 Alias = null;
             }
-            AddressList = new DeviceData(Address, Alias, Name, type);
-            deviceData.add(AddressList);
+            data = new DeviceData(Address, Alias, Name, type);
+            deviceData.add(data);
         }
 
         return deviceData;
     }
 
-    public boolean Connection(String address, String Name) {
+    public boolean Connection(String address) {//주로를 넘겨 받아 연결 시도
         BluetoothDevice device = bluetoothAdapter.getRemoteDevice(address);
 
 
@@ -93,10 +95,10 @@ public class BluetoothManager {
             e.printStackTrace();
         }
 
-        return bluetoothSocket.isConnected();
+        return bluetoothSocket.isConnected();//연결 성공시 true 반환 실패시 false 반환
     }
 
-    public void DataOutput(String text){
+    public void DataOutput(String text){//문자열을 문자형태로 바꿔 하나씩 보낸다.
         try {
             OutputStream outputStream = bluetoothSocket.getOutputStream();
             //outputStream.write(3);
@@ -109,7 +111,7 @@ public class BluetoothManager {
             e.printStackTrace();
         }
     }
-    public void DataOutput(int num){
+    public void DataOutput(int num){//정수를 보낸다
         try {
             OutputStream outputStream = bluetoothSocket.getOutputStream();
             outputStream.write(num);
@@ -118,13 +120,13 @@ public class BluetoothManager {
             e.printStackTrace();
         }
     }
-    int b;
-    public int DataInput(){
+    int b;//테스트용
+    public int DataInput(){//데이터를 받는다. (스레드를 사용해서 실시간으로 리스닝을 해야한다.)
 
         try {
             InputStream inputStream = bluetoothSocket.getInputStream();
             inputStream.skip(inputStream.available());
-            b = inputStream.read();
+            b = inputStream.read();//받은 데이터를 b변수에 넣는다.
 
             Log.d("===============DataInput", "" + b);
 
